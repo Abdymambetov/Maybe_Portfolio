@@ -1,0 +1,67 @@
+section {
+    transition-property: height;
+    transition-timing-function: cubic-bezier(0.5,0.25,0,1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-right: 32px;
+    border-start-end-radius: 32px;
+    margin-bottom: -32px;
+}
+
+.expanded {
+    height: calc(100vh - (4 * 60px) + 32px);
+}
+
+.collapsed {
+    height: calc(60px + 32px);
+}
+
+#home {
+    background-color: #FFFFFF;
+}
+
+#about {
+    background-color: #b4b4b4;
+}
+
+#skills {
+    background-color: #787878;
+}
+
+#projects {
+    background-color: #3f3f3f;
+}
+
+#contacts {
+    background-color: #000000;
+}
+
+#contacts.collapsed {
+    height: 60px;
+}
+
+.section-title {
+    color: #FFF;
+    text-align: right;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    height: 60px;
+    align-items: center;
+    line-height: 60px;
+    font-family: monospace;
+}
+
+#home .section-title {
+    color: #000000;
+}
+
+.collapsed .section-title:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.expanded .section-title {
+    text-decoration: underline;
+}
